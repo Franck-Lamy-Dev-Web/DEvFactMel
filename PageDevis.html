@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Logo Mel transp.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div id="resultats">
+            <header>
+                <div class="logo">
+                    <img src="/Logo Mel transp.png" alt="Logo Tontons Friteurs">
+                </div>
+                <div class="tontons-friteurs">
+                    <p>Les Tontons Friteurs<br>B.P.101<br>59280 Armentières<br>Siret : 48928062800012</p>
+                    <h3 class="dateJour">Date du jour</h3>
+                    <script>
+                        // Sélectionnez l'élément par sa classe
+                        var elements = document.getElementsByClassName("dateJour");
+                        // Obtenez la date actuelle
+                        var dateActuelle = new Date();
+                        // Parcourez tous les éléments avec la classe "dateJour" et définissez leur valeur
+                        for (var i = 0; i < elements.length; i++) {
+                            elements[i].innerText = "Le : " + dateActuelle.toLocaleDateString();
+                        }
+                    </script>
+                </div>
+                            </header>
+            <h1 id="devFactTitle">Devis</h1>
+            <br>
+                <table id="tableau-resultats">
+                    <tr>
+                        <th>Descriptif</th>
+                        <th>Quantité</th>
+                        <th>Montant unitaire TTC</th>
+                        <th>Montan total HT</th>
+                        <th>Montan total TTC</th>
+                    </tr>
+
+                    <tr>
+                        <td id="descriptif">Test</td>
+                        <td id="nombrePersonnes">Test</td>
+                        <td id="prixUnit">prixUnit</td>
+                        <td id="tarifHT">HT</td>
+                        <td id="tarifTTC">TTC</td>
+                    </tr>
+                    <tr>
+                        <td>Déplacement et temps de travail</td>
+                        <td></td>
+                        <td></td>
+                        <td id="deplacementHT">HT</td>
+                        <td id="deplacement">TTC</td>
+
+                    </tr>
+                </table>
+                <h3 id="total">Montant total TTC</h3>
+            
+                                
+            </div>
+        <button onclick="telechargerPDF()">Télécharger le devis au format PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+

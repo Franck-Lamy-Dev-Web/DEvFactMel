@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture / Devis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Logo Mel transp.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="/Logo Mel transp.png" alt="Logo Tontons Friteurs">
+            </div>
+            <div class="tontons-friteurs">
+                <p>Les Tontons Friteurs<br>B.P.101<br>59280 Armentières<br>Siret : 48928062800012</p>
+            </div>
+        </header>
+        <h1 >Formulaire de Devis</h1>
+
+        <form id="devisForm" action="PageDevis.html" method="get">
+
+            <label for="FactDevis">Facture ou devis :</label>
+            <select id="FactDevis" name="FactDevis" required>
+                <option value="Devis">Devis</option>
+                <option value="Facture">Facture</option>
+            </select>
+
+            <label for="descriptif">Descriptif :</label><br>
+            <input type="text" id="descriptif" name="descriptif" required><br>
+            
+            <label for="tarif">Tarif (€) :</label><br>
+            <input type="number" id="tarif" name="tarif" step="0.01" required><br>
+            
+            <label for="nombrePersonnes">Nombre de personnes :</label><br>
+            <input type="number" id="nombrePersonnes" name="nombrePersonnes" required><br>
+            
+            <label for="tva">Montant de la TVA :</label>
+            <select name="optionTva" id="tvaChoice">
+                <option value="5">5%</option>
+                <option value="10" selected>10%</option>
+                <option value="20">20%</option>
+            </select>
+            <br>
+
+            <label for="deplacement">Déplacement TTC (€) :</label><br>
+            <input type="number" id="deplacement" name="deplacement" step="0.01"><br>
+            
+            <button type="button" onclick="calculerDevis()">Calculer Devis</button>
+            
+        </form>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
