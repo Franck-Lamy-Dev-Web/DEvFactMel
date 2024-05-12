@@ -103,3 +103,58 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
+/*Style boutons devis facture*/
+
+.buttonDevFact{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Ajouts pour rendre le site responsive uniquement sur les smartphones */
+
+@media only screen and (max-width: 767px) {
+    /* Appliquez ces styles uniquement sur les écrans ayant une largeur maximale de 767px (typiquement smartphones) */
+
+    .container {
+        max-width: 95%; /* Redimensionne la largeur maximale pour les petits écrans */
+        padding: 10px; /* Réduit l'espacement autour du contenu */
+    }
+
+    .logo img {
+        max-width: 100%; /* Permet à l'image du logo de s'adapter à la largeur de son conteneur */
+        height: auto; /* Garantit le bon rapport hauteur/largeur de l'image */
+        width: auto\9; /* Correction pour IE9 */
+    }
+
+    .tontons-friteurs p {
+        font-size: 12px; /* Réduit légèrement la taille de la police pour les smartphones */
+    }
+
+    h1, .devFactTitle {
+        font-size: 24px; /* Augmente la taille de la police pour les titres sur les smartphones */
+    }
+
+    form {
+        margin-bottom: 10px; /* Réduit l'espacement entre le formulaire et le reste du contenu */
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%; /* Permet aux champs de saisie de prendre toute la largeur disponible */
+    }
+
+    button {
+        width: 100%; /* Permet aux boutons de prendre toute la largeur disponible */
+    }
+
+    #resultats {
+        padding: 10px; /* Réduit l'espacement à l'intérieur de la zone de résultats */
+    }
+
+    /* Réduit la taille du texte dans le tableau pour une meilleure lisibilité sur les smartphones */
+    th, td {
+        font-size: 14px;
+    }
+}
+
